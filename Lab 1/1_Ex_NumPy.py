@@ -1,3 +1,4 @@
+import pandas as pd
 import numpy as np
 # Arrat of 4*5
 array1_1 = [1, 2, 3, 4, 5]
@@ -33,3 +34,9 @@ print("\nMedian of the matrix :- ", medianOfMat_1)
 transOfmat_1 = nparray_1.T
 print("\nTranspose of the matrix :-")
 print(transOfmat_1)
+# Numeric centric data
+df = pd.read_csv('mtcars.csv')
+cars = np.array([df.mpg, df. cyl, df.disp, df.hp, df.drat,
+                df.wt, df.qsec, df.vs, df.vs, df.am, df.gear, df.crab])
+nparraySelf = cars - np.mean(cars, axis=0)
+print(nparraySelf)
